@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM = Quersyselector</title>
+</head>
+<body>
+    <h1>Quersyselector is used</h1>
+    <!-- 005    == accessing elements with QuerySelector('selector')      -->
+
+    <p id="quesryselector1">Access me by id in quesryselector</p>
+    <div class="quesryselector2">Access me by classname in quesryselector</div>
+    <p class="quesryselector2">Access me by classname in quesryselector</p>
+
+    <!-- we can notify queryselector that it is class,id by using # or . -->
+
+    <script>
+        //for tags with idname.   == we used # here
+        let queryid=document.querySelector('#quesryselector1');
+        queryid.style.border='solid black 2px';
+
+        //for tags with classname   == we used . here
+        let queryclass=document.querySelector('.quesryselector2');
+        queryclass.style.border='solid red 2px';  
+        //as we know class is acesed like an array but here it will not access it as an array
+        //it will just access the first element with classname quesryselector2 .
+        //** queryselector at a time only picks one class tag which will be 1st in the html document
+        let queryTag=document.querySelector('p');
+        queryTag.style.backgroundColor='purple'; //it will select 1st tag in document and apply changes .
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Objects Questions.</title>
+</head>
+<body>
+    <h2>JS Object question</h2>
+
+    <script>
+        // 001 == Write a javascript file to convert a two-dimensional array in to an object in JavaScript, print it on the console window of your browser?
+
+        const twoDarray=[
+        ['neha','icecream'],
+        ['rahul','Pizza'],
+        ['ram','burger'],
+        ['shyam','spring rolls']
+    ];
+    console.log(twoDarray);
+    console.log(typeof(twoDarray));
+
+    const obj=Object.fromEntries(twoDarray);
+    console.log(obj);
+    
+    //making index as an key and array values as values of object.
+    const array = ['a', 'b', 'c'];
+    const obj2 = {...array}; // or Object.assign({}, array);
+    console.log(obj2);
+
+
+    // 002 =Write a javascript file to create a student object of any 5 properties and then delete the 2properties from the student object.
+    // Also console/alert the object output before or after deleting the property.
+
+    const student={
+        name:'ravi',
+        age:22,
+        class:'lastyear',
+        div:'B',
+        cgpa:7.8
+    }
+
+    console.log(student);
+    alert("Before deletion: " + JSON.stringify(student));
+
+    delete student.div;
+    delete student.cgpa;
+
+    console.log(student);
+    alert("after deletion: " + JSON.stringify(student));
+
+
+    //003  = Swap Values and Keys 
+    // Write a javascript file to get a copy of the object where the keys have become the values and the values the keys.
+
+    const originalObject={
+        name:'ravi',
+        age:22,
+        class:'lastyear',
+    }
+    function swapKeysAndValues(obj){
+        const swappedobject ={};
+
+        for (let key in obj){
+            if (obj.hasOwnProperty(key)){
+                swappedobject[obj[key]]=key;
+
+            }
+        }
+        return swappedobject;
+
+    }
+
+    // Swapping keys and values
+    const swappedObject = swapKeysAndValues(originalObject);
+
+    console.log("Original Object:", originalObject);
+    console.log("Swapped Object:", swappedObject);
+    
+
+    //004 = Search for a given property (key).
+    //Write a javascript file to create a new object and then check whether an object contains any given property.
+
+    const object1={
+        name:'ravi',
+        age:22,
+        class:'lastyear',
+    }
+
+    const keys = Object.keys(object1); //to get all keys of object in an object.
+    console.log(keys);
+
+    let true1= (object1.hasOwnProperty('age')); //to check if these key is present in object1 or not
+    alert(true1);
+
+
+    //optional answer for question no oo4 using an function.
+    function haskey(object1,key){
+        return object1 != null && hasOwnProperty.call(object1, key);
+    }
+    console.log(haskey(object1,"ravi"));
+    </script>
+    
+</body>
+</html>

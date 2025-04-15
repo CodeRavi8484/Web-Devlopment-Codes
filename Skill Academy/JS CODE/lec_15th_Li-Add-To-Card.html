@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add to card code</title>
+    <style>
+        #main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>    
+    
+</head>
+<body>
+    
+    <h1>Add to card function</h1>
+    <h2>product</h2>
+    <div id="main">
+    <img src="https://imgs.search.brave.com/xgRpwlgEVfqC3DiWVi90Q4_s750yI-Tm5cQfG4CxPAU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by8zZC1uZXctYmxh/Y2stYm13LWNhcl8x/MTMxMzc3LTQzNC5q/cGc_c2l6ZT02MjYm/ZXh0PWpwZw" height="200px" width="200px" alt="">
+    <div id="buttons">
+        <button id="dec">-</button>
+        <span id="span">0</span>
+        <button id='inc'>+</button>
+        
+    </div>
+    </div>
+    
+    <script>
+        // both commented and not commented code are same
+
+        
+        // function cart(){
+        //     let count=0;
+        //     return function inner(){
+        //         count++;
+        //         document.getElementById('span').innerHTML=count;
+
+        //     }
+        // }     
+        // document.getElementById('inc').addEventListener('click',cart());
+
+        function createcounter(){
+            let count=0;
+            console.log("create counter calling");
+               return function increment(){   //its an example of closure as here we have function and a inner function which uses value of count
+                count++;
+                console.log(count);
+                document.getElementById('span').innerHTML=count;
+                 }
+            
+        }
+        document.getElementById('inc').addEventListener('click',createcounter());
+        
+
+    </script>
+    
+</body>
+</html>

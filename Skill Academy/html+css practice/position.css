@@ -1,0 +1,33 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    background-color: black;
+
+}
+#div1{
+    height: 20px;
+    width: 100px;
+    background-color: aqua;
+}
+#div2{
+    
+    height: 30px;
+    width: 120px;
+    background-color: rgb(60, 0, 255);
+}
+/* its a parent div */
+#div3parent{
+    position: relative;
+   
+    height: 50%;
+    width: 50%;
+    /* here the div3 will not go out of its parent div div3parent as parent div has position:relative */
+}
+#div3{
+    top: 40%;
+    left: 45%;
+    position: absolute;
+    height: 40px;
+    width: 100px;
+    background-color: rgb(255, 0, 195);
+}

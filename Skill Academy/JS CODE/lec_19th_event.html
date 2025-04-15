@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <!-- Just an event 001 =ONCLICK -->
+    
+    <button onclick="fun()" >Show Data</button>
+    <div id="time"></div>
+
+    
+    <h1 onmouseover="over()" onmouseout="out()" onmousedown="down()" onmouseup="up()">mouse is over me </h1>
+
+
+
+    
+
+
+    <script>
+            function fun(){
+                document.getElementById('time').innerHTML=Date();
+            }
+
+    //event no 002 =onmouseover=>
+           function over(){
+           document.body.style.color='red';
+           }
+           function out(){
+            document.body.style.color="green";
+
+           }
+    //Event no 003 =onmousedown=> 
+            function down(){
+                alert("mousedown has occured")
+            }    
+    //Event no 004 =onmouseup=> 
+            function up(){
+                alert("mouseup has occured")
+            }   
+          
+    
+
+
+
+            
+    </script>
+
+</body>
+</html>

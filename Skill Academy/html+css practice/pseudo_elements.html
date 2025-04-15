@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo elements</title>
+    <style>
+
+        p{
+            position: relative;
+            width: fit-content;
+            font-size: 50px;
+        }
+        p::before{
+            content: "";
+            height:3px ;
+            width:100% ;
+            background-color: red;
+            position: absolute;
+            top: 100%;
+        }
+        p::after{
+            content: "";
+            height:3px ;
+            width:100% ;
+            background-color: rgb(92, 189, 59);
+            left: 0;
+            position: absolute;
+            top: 50%;
+        }
+        p::first-letter{
+            color: rgb(20, 20, 20);
+        }
+        p::first-line{
+            color: cadetblue;
+        }
+        h3::selection{
+            color:rgb(97, 42, 165) ;
+            
+
+        }
+        p:active{
+            background-color: blue; 
+            /* whenever we click on the paragraph then it will active and make changes as background color blue */
+        }
+        input:focus{
+            background-color: chartreuse;
+            /* whenever we click on input to write it will change the background color to green */
+        }
+       
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, officiis?</p>
+   
+    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, corrupti.</h3>
+    <input type="text" placeholder="were focus is used ">
+    
+    
+</body>
+</html>

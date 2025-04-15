@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D array and .Map() method</title>
+</head>
+<body>
+    <h2>Here creating an 2D array and Map method used</h2>
+    <!-- <iframe width="464" height="286" src="https://www.youtube.com/embed/mCDruPisyWE" title="ladki bahin yojana online apply 2024 | ladki bahin yojana form kasa bharayacha arj | form filling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="464" height="286" src="https://www.youtube.com/embed/YK-Apcbusro" title="Real Madrid vs Atalanta | Final | Highlights | UEFA Super Cup | 15th August 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+
+<div id="demo"></div>
+
+    <script>
+        //001 ==>  2d array craeated
+        const Twodarray=[[1,2,3],[4,5,6],[7,8,9]];
+        console.log(Twodarray);
+
+        console.log(Twodarray[0]);
+        console.log(Twodarray[1]);
+        console.log(Twodarray[2]);
+
+        console.log(`To access Specific element in array like this =(3)=> ${Twodarray[0][2]}`);
+        console.log(`To access Specific element in array like this =(6)=> ${Twodarray[1][2]}`);
+        console.log(`To access Specific element in array like this =(9)=> ${Twodarray[2][2]}`);
+
+        //to convert 2darray in 1d array we have=
+        const newarray=Twodarray.flat();
+        console.log(`Here we converted 2darray in 1darray = ${newarray}`);
+
+        //002 ==> .map() method 
+        //.map() method is used to traverse array without using loop 
+        //
+
+        let circleredius=[10,20,30];
+        let redius=circleredius.map((r) =>{         //here r can be atything //we can put anything in palce of r.
+            console.log(r);
+            return r;
+
+        });
+        document.getElementById('demo').innerHTML=redius;
+        //Here .map() will automaticaly create let radius into a array.
+
+
+      
+       
+
+    </script>
+    
+</body>
+</html>

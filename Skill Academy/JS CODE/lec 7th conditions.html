@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <h1>Elligiablity checking </h1>
+    <div id="agee"></div>
+       
+    <script>
+        // else-if condition
+        var a=10;
+        if(a<10){
+            document.getElementById('demo').innerHTML=('a is smaller then 10')
+        }
+        else if(a==10){
+            document.getElementById('demo').innerHTML=('a is equal to 10')
+
+        }
+        else{
+            document.getElementById('demo').innerHTML=('a is grater than 10')
+        }
+
+        // quetion 1 =Using If/Else condition, check whether a person is eligible to vote in India or not
+        var age =18;
+        if(age<18){
+            document.getElementById('agee').innerHTML=("not elligiable for voting")
+        }
+        else{
+            document.write(" elligiable for voting");
+        }
+        //question 2 =By using Date and getHours method, get the current time and display the greetings (goodday/evening) depending on the time
+        document.write("<br>");
+        const hour = new Date().getHours();
+        
+        
+        if (hour < 18) {
+            document.write("Good day")
+        } 
+        else {
+            document.write("Good evening")
+        }
+
+
+        // question 3 =Display random links in your code, using Math.random() method and conditions.
+
+        // Math.random()= The Math.random() function in JavaScript is used to generate a random floating-point number between 0 (inclusive) and 1 (exclusive).
+        document.write("<br>");
+        let lin ="<a href='#'>LinkedIn</a>";
+        let ind ="<a href='indeed.com'>Indeed</a>";
+        let random =Math.random();
+        document.write(random);
+        if(random<0.5){
+            document.write(lin);
+        }
+        else{
+            document.write(ind);
+        }
+        
+        document.write("<br>");
+
+        // question 4 = Display the day in the output using switch statement and Date methods.
+        let today = new Date().getDay();
+        let dayName;
+        switch (today) {
+            case 0:
+                dayName = "Sunday";
+                break;
+            case 1:
+                dayName = "Monday";
+                break;
+            case 2:
+                dayName = "Tuesday";
+                break;
+            case 3:
+                dayName = "Wednesday";
+                break;
+            case 4:
+                dayName = "Thursday";
+                break;
+            case 5:
+                dayName = "Friday";
+                break;
+            case 6:
+                dayName = "Saturday";
+                break;
+            default:
+                dayName = "Unknown Day";
+        }
+        document.write(dayName);
+       
+        
+       
+
+
+    </script>
+</body>
+</html>

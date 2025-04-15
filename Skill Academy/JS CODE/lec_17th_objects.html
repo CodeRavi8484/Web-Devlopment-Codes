@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+    <h1>Always we need to create a object we don't need to create the class and then object.</h1>
+    <h2>we can create object without class also.</h2>
+    <h4 id="demo"></h4>
+    <script>
+        let studentdetails = {                  //like this we need to declare object without class
+            fname: 'ravi',                      //this are the values in the object.they are in form of key:value pair
+            age: 22,                            //always use quama(,) to write another key:valur pair in object.
+            uis: 102,                           //in object we use (=) and (:) in key value pair.
+            fun:function(){                     //function created inside the object.
+                console.log(`hello my name is ${this.fname}`);
+            },
+            obj2: {                             //another object inside a object
+                fname:'snajay',
+                fun2:function(){
+                    console.log(`the inner name is ${this.fname}`);
+                    console.log(`the outter name is ${studentdetails.fname}`);
+
+                }
+
+            }
+              
+        }
+
+            document.getElementById('demo').innerHTML = studentdetails.fname;         //like this we need to acees the data on frontend
+            console.log(studentdetails);                                              //like this we can acces it on console .
+            studentdetails.fun();
+            studentdetails.obj2.fun2();
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

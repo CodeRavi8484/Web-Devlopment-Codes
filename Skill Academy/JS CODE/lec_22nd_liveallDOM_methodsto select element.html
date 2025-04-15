@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Lectur on DOM</title>
+</head>
+<body>
+    <h2>All DOM methods to select the elements</h2>
+    <!-- 002 -->
+
+    <p id="demo1">Hello Ravi</p>
+    <!-- 003 -->
+
+    <div class="class1">Thsi is 1st class.</div>
+    <div class="class1">This is 2nd class.</div>
+
+    <!-- 004  GetElementByTagName -->
+
+     <p>Hello</p>
+     <p id="id">Here we are using Dom tagname </p>
+     <p>and making all  color purple</p>
+
+
+    <br>
+    <script>
+    // 001     == basic array declaration and printing
+
+        let arr=["omerga","solapur","pune","newyork","germany"];
+        document.write(`Whole array accesed : =>  ${arr}`);
+        document.write("<br>"); 
+        document.write(`Single element acessed : =>  ${arr[2]}`);         //single element aceess using index of element.
+
+    // 002     ==showing arrays 1 element in 1 line and next in next line using a for loop. ==(getElementById)
+
+        let array1=["Ravi","Somnath","Aditya","Omkar"];
+       
+        for(let i=0;i<4;i++){
+            console.log(array1[i]); 
+        }
+        document.getElementById('demo1').style.backgroundColor='lightblue';
+
+    // 003     == accesing class name elements on web page.         ===    ==(getElementByClassName).
+        //here class can have same name so it can act as an array because,
+        //all same class name element are in an array.
+        //then we cannot access them without indexing it .
+        //we need to access them using there index.
+
+        let class1=document.getElementsByClassName('class1');
+        class1[0].style.backgroundColor='orange';  //index  0.
+        class1[1].style.backgroundColor='pink';    //index 1.
+
+        // Like this we can access both or all tags with same classname.
+        for(let i=0;i<2;i++){
+            class1[i].style.border='solid 2px black'
+        }
+
+
+    // 004     accessing elements with tag name. ==  getElementByTagName.
+        //same here the tag are also stored as an array so to access them we need to use index values of array.
+        
+        let tagname=document.getElementsByTagName('p');
+        tagname[1].style.color='red';
+        tagname[2].style.color='orange';
+        tagname[3].style.color='purple';
+
+        //to access all tags at a time we need to use the loop.
+        for(let i=0;i<4;i++){
+            tagname[i].style.border='1px solid black';
+            //all p tags will have the black border of 1px.
+        }
+         
+        //selecting all div tags at a time == >>
+
+                 // let divs=document.getElementsByTagName('div');
+                 // for(let i=0;i<2;i++){
+                 // divs[i].style.backgroundColor="green";
+                 // }
+
+        
+
+        
+                
+
+       
+       
+
+
+
+    </script>
+
+
+</body>
+</html>

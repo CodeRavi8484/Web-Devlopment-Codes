@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Globle and local varable</title>
+</head>
+<body>
+    <script>
+        var data =200;
+        function fun(){
+            var data = 100;
+            document.write(data);
+
+        }
+
+        document.write(data);
+        document.write('<br>');
+        
+        fun();
+        document.write('<br>');
+
+
+        // queston 2
+        
+        document.write('List of Fruits \nApple \nOrange \nMango');
+        // With template literal
+        document.write('<br>');
+        document.write(`List of FruitsAppleOrangeMango`);
+
+
+          // queston 3
+          var p=1000;
+          var r=7;
+          var t=1;
+          var z= (p*r*t)/100;
+          document.write('<br>');
+          document.write(z);
+
+
+          //question 4
+          console.log(`menu is 
+          sandwitch
+          burger
+          frenchfries
+          drinks`)
+        
+          // redeclaring variable
+          var z=10;
+          var z='ravi';
+          console.log(z);
+
+          // array and oprations on it
+        var array=["banana","mango","apple"];
+        document.write(array);
+        document.write('<br>');
+        array[0]="pista";
+        array.push("banana");
+        document.write(array);
+
+        // redclaring using let
+        document.write('<br>');
+
+        let x=23;
+        {
+            let x ="ravi";
+            document.write(x);
+            
+        }
+        document.write('<br>');
+
+        //array and const element and operations
+
+        var phone=["oppo","iphone","redmi"];
+        document.write(phone);
+        document.write('<br>');
+
+        phone[0]="oneplus";
+        phone.push("realme");
+        document.write(phone);
+
+
+
+
+    
+       
+        
+    
+
+
+
+    </script>
+    
+</body>
+</html>

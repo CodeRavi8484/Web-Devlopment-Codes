@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Constructor</title>
+</head>
+<body>
+    <h2>Function Constructor</h2>
+    <p><b>function constructor is a way to create an object using function.</b></p>
+
+    <script>
+        function details(){                //normal function created
+            this.fname='ravi';             //in this function we need to use the this keyword
+            this.fun=()=>{    
+                            //function is created 
+                console.log(`THe name is ${this.fname}`);        //to acess the name we need to write this.keyword
+            }
+        }
+
+        let obj=new details();         //obj object is created and the function(details) is refered to it(to obj).All the values in function details can be acessed through the obj object.
+        obj.fun();                      //using obj innerfunction fun is called
+
+        console.log('====================');
+        console.log(obj.fname);             //using obj we just acessed the name from the outer function
+
+    </script>
+
+
+</body>
+</html>

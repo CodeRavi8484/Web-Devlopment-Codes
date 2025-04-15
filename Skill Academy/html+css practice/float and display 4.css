@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    border: solid 2px red;
+}
+h1{
+    color: rgb(195, 148, 239);
+    margin-top: 10px ;
+    padding-left:20px ;
+    
+}
+.hi{
+    
+    text-decoration: underline coral 5px;
+    font-size: 20px;
+   
+    
+    font-style: oblique;
+    display: grid;
+
+}
+h3{
+    text-shadow: 2px 4px 2px red;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+.image{
+    height: 200px;
+    width: 200px;
+    float:left;
+    padding-right: 20px;
+}
+.hello{
+    text-align: justify;
+    
+
+}

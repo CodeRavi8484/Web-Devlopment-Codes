@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function and loops live</title>
+</head>
+<body>
+    <h2>Function and loop live lecture</h2>
+    <script>
+        // 01- basic function
+        function show(){
+            let a=10;
+            let b="ravi";
+            let c="nangare";
+            document.write(a);
+            document.write("<br>");
+            document.write(b);
+            document.write("<br>");
+            document.write(c);
+        }
+        show();
+
+        
+        document.write("<br>");
+        //02- arrow function
+        let display=()=>{
+            document.write("non parameterised arrow function");
+        }
+        display();
+
+        document.write("<br>"); 
+        //parameterised arrow function
+        let display2=(name)=>{
+            document.write("parameterised arrow function written by => ",name);
+        }
+        display2('ravi nangare');
+
+
+        document.write("<br>");
+        //return  statement
+        function studentdetails(name,uid){
+            return `the student name is ${name} and uis is ${uid}`;
+
+        }
+        document.write(studentdetails('ravi',14));
+
+
+
+        document.write("<br>");
+        //immidate invoke function expression
+        let name ='ravi';
+        let fruitname =prompt('enter your fav fruit');
+        (function fruit(){
+            document.write(`${name} likes ${fruitname}`);
+
+        }) 
+        (name,fruitname)
+       
+
+
+    </script>
+
+    
+</body>
+</html>

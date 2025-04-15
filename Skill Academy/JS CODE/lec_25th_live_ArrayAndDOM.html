@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY AND DOM</title>
+</head>
+<body>
+    <h2>Controling Array using DOM</h2>
+    <p id="demo"></p>
+    <ul id="demo1">
+    
+    </ul>
+
+    <ul id="demo2">
+
+    </ul>
+    
+    <script>
+        // 001 printing array as it is .
+        let array1=[10,20,30,40,"peter"];
+        document.getElementById('demo').innerHTML=array1; //These will print whole array in one line
+
+        console.log(array1);                              //These will print whole array
+
+
+        for(let i=0;i<5;i++){
+        document.getElementById('demo1').innerHTML=array1[i];    //these will itterate and will print all values but we can see 
+        console.log(array1[i]);                                  //only last element because all values get overwrite and we can see 'peter'.
+        }                                                        //in single element we can store only one element or complet array we cant print one after other elements.
+
+    
+
+    // 002 CreatingElement and appending it Using DOM.
+    let demo2=document.getElementById('demo2');
+
+    for(let i=1;i<=20;i++){
+        let li=document.createElement('li');
+        li.innerHTML=i;
+
+        demo2.append(li);
+    }
+    
+    
+    </script>
+</body>
+</html>

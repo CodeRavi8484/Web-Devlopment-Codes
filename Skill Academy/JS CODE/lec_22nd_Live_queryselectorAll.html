@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Use of queryselectorAll</title>
+</head>
+<body>
+    <!-- 006 == queryselectorall -->
+
+    <!-- as we know it select sll elements of same id,class and tag name -->
+    <!-- and store them in an array -->
+    <p id="id1">Here we have used an id</p>
+    <p class="class1">Here we have used class and its 1st p using class</p>
+    <p class="class1">Here we have used class and its 2nd p using class</p>
+    <p class="class1">Here we have used class and its 3rd p using class</p>
+    
+    <b>These is b tag No. 1</b>  <br><br>
+    <b>These is b tag No. 2</b>  <br><br>
+
+    <div>These is div tag No.1</div>  <br>
+    <div>These is div tag No.2</div>
+
+    <script>
+        // 001 == now use queryselectorAll for id ==>   
+        let idselector=document.querySelectorAll('#id1');
+        console.log(idselector);
+        idselector[0].style.color='orange';
+
+        // 002 == now use queryselectorAll for class ==>  
+        let classselector=document.querySelectorAll('.class1');
+        console.log(classselector);
+        for(let i=0;i<3;i++){
+            classselector[i].style.color='red';
+           
+        }
+
+        // 003 == now use queryselectorAll for b tags ==>
+        let tagselector=document.querySelectorAll('b');
+        for(let i=0;i<2;i++){
+            tagselector[i].style.border='solid black 1px';
+        }
+        console.log(tagselector);
+
+         // 004 == now use queryselectorAll for div tags ==>
+         let tagselector2=document.querySelectorAll('div');
+        for(let i=0;i<2;i++){
+            tagselector2[i].style.border='solid black 1px';
+            tagselector2[i].style.backgroundColor='lightblue';
+
+        }
+
+
+        //    //we can also select 2 or more tags at a time using queryselectorAll 
+        //    //but we need to itterate the loop according =means total no. tag times.LIKE THIS
+
+        let tagselector3=document.querySelectorAll('b,div');
+        for(let i=0;i<4;i++){
+            tagselector3[i].style.border='solid black 1px';
+            tagselector3[i].style.backgroundColor='lightblue';
+        }
+        console.log(tagselector3);
+
+
+
+       
+
+        </script>
+    
+</body>
+</html>

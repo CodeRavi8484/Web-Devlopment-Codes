@@ -1,0 +1,25 @@
+li{
+    padding-bottom: 2%;
+
+}
+.complex{
+    margin-bottom: 3%;
+}
+.proffesion{
+    margin-bottom: 3%;
+}
+
+.main{
+    height: 95%;
+    width: 40%;
+    background-color: bisque;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    
+    border: solid;
+    
+    
+}

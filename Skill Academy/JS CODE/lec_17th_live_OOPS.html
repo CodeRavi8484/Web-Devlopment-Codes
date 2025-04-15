@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPS</title>
+</head>
+<body>
+    <H1>This are the concepts of OOPS</H1>
+    <br>
+    <h4>check in console</h4>
+    <script>
+        class student{   //class declaration of name student
+            fname='ravi';
+            age=22;
+            uid=121; 
+            show(){   //function declared of name show inside class student
+                console.log(`Name of student is ${this.fname},age is ${this.age} and uid is ${this.uid}`);  //this keyword is used to acess the values in the class
+                console.log(this)
+            }
+
+        }
+        let obj =new student()  //object named obj is created with the refrence of class named student
+            obj.show();        //function show is called with the reference of object obj.
+        let obj1=new student(); //another object of name obj1 is created 
+        obj1.fname='somnath';   //value of fname is changed using object obj1
+        obj1.show();    
+
+        console.log('===========================');
+
+
+        //example no 02 ====
+        //use of constructor and this. keyword in class and a proper way to declate a class
+        class details{
+            constructor(){
+                this.firstname='sanjay'; //always use this keyword while giving values.
+                this.agee=50;
+                this.id=102;
+                this.fun = ()=>{   //arrow function declared of name fun inside class student. always use arrow function in class.
+                console.log(`Name of student is ${this.firstname},age is ${this.agee} and uid is ${this.id}`);  //this keyword is used to acess the values in the class
+                console.log(this)
+            }
+            }
+            
+        }
+        let obj2=new details();
+        obj2.fun();
+        console.log('===========================')
+        let obj3=new details();  
+        obj3.firstname='aditya';//using obj3 firstname is changed .
+        obj3.fun();  //it will show the name changed (aditya) in details.
+        console.log('===========================')
+        let obj4=new details(); //it will show the original name as it is. 
+        obj4.fun();
+
+
+
+        
+    </script>
+    
+</body>
+</html>

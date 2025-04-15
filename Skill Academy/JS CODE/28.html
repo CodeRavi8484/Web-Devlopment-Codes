@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <!----function that takes the number as input and checks if prime or not if prime return true else false--->
+    <input type="number" placeholder="ENTER YOUR NUMBER" id="number">
+    <button onclick="primeornotprime()">SUBMIT</button>
+
+    <script>
+        function primeornotprime(){
+            let number1=document.getElementById('number').value;
+
+            if (number1<2){
+                document.write("not prime");
+                return;
+
+            }
+            for(let i=2;i<number1;i++){
+                if(number1%i==0){
+                    document.write("not prime");
+                    return;
+                }
+                else {
+                    document.write("prime");
+                    return;
+                }
+            }
+
+
+        }
+
+        /*1
+          22
+          333
+          4444
+          55555*/
+
+          for(let x=1;x<=5;x++){
+            document.write('<br>')
+            for(let y=1;y<=x;y++){
+                document.write(x);
+            }
+          }
+    </script>
+
+</body>
+</html>

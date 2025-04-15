@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json </title>
+</head>
+<body>
+    <p>It is just an practice of JSON.</p>
+    <div id="demo"></div>
+
+    <div id="demo2"></div>
+    <script>
+        //01 == allowed datatypes in json
+        let jsonobject={"name":"Ravi",
+            "age":22,
+            "addres":{"city":"pune"},
+            "subject":["maths","science","computer"],
+            "married":null,
+            "isincity":true
+        };
+        document.getElementById('demo').innerHTML=jsonobject;
+        console.log(jsonobject);
+
+        //02 == JSON parsing   (string to => object or array)
+        const receivedfromserver = `{"name":"ADI",
+            "age":23,
+            "addres":{"city":"pune"},
+            "married":"no" }`;   //it is an jsonobject in string
+        
+        const obj =JSON.parse(receivedfromserver);
+        document.getElementById('demo2').innerHTML=obj.name + " " + obj.age;
+        console.log(obj);
+
+        //02 ==  JSON parsing on array
+        const strarr =`["Ravi","Adi","Soma"]`;
+
+        const arr=JSON.parse(strarr);
+
+        console.log(arr);
+        document.write(arr);
+
+        //EXCEPTION = OF JSON parsing
+        //1 = parsing Date  and function
+        const fromserver = `{"name":"ADI",
+            "age":23,
+            "todaydate":"2024-10-3"}`;  //date is writen in string
+
+        const parsedobj=JSON.parse(fromserver);
+        console.log(parsedobj); //it will show date as string  
+
+        parsedobj.todaydate= new Date(parsedobj.todaydate); //now converted into an date formate
+        console.log(parsedobj.todaydate); 
+
+        
+
+
+        const stringfroomserver = `{"name":"ADI",
+            "city":"function()  { return pune}",
+            "age":23}`; 
+        
+            const parsedobj2=JSON.parse(stringfroomserver);
+            console.log(stringfroomserver);  
+
+            console.log(parsedobj2.name);
+            console.log(parsedobj2.city); //it will return whole function not just pune
+
+            parsedobj2.city =eval("("+ parsedobj2.city + ")");
+            console.log(parsedobj2.city); //now we got our function 
+
+            console.log(stringfroomserver); 
+            
+            
+        //03 ==  JSON stringify  (object to => string)
+        
+        const obj3 ={name:"ravi",
+            age:22,
+            city:"pune"
+        };
+        console.log(obj3);  //iit will show as an object 
+
+        const mystringify = JSON.stringify(obj3);  //now it will show as an string
+        console.log(mystringify);
+
+        
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+
+        
+
+    </script>
+    
+</body>
+</html>

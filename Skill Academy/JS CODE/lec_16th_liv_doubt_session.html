@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question on function</title>
+</head>
+<body>
+    <!-- question no 01 ==  taking input from user and displaying it when we click submit button -->
+     <h1>user data</h1>
+     <input type="text" placeholder="first name" id="firstname">
+     <input type="text" placeholder="last name" id="lastname">
+     <input type="number" placeholder="age" id="age">
+     <button id="button" onclick="input()">submit</button>
+     <h3 id="para"></h3>
+
+     <!-- question 02 html -->
+      <br> <br>
+      <h1>Addition of two numbers </h1>
+      <input type="number" id="firstnumber" placeholder="enter 1st number">
+      <input type="number" id="secondnumber" placeholder="enter 2nd number">
+      <button id="button_no2" onclick="add()">Add</button>
+      <h3 id="total"></h3>
+
+
+     <script>
+        //question 01
+        function input(){
+            console.log('in');
+            let fname=document.getElementById('firstname').value;
+            let lname=document.getElementById('lastname').value;
+            let aage=parseInt(document.getElementById('age').value);
+            document.getElementById('para').innerHTML=`First name is ${fname} sirname is ${lname} and age is ${aage}`;
+            console.log(typeof(aage));
+        }
+        
+    // question 02 == create a function that take two numbers from user and  add both of it
+    function add(){
+        let fnumber = parseInt(document.getElementById('firstnumber').value);
+        let snumber = parseInt(document.getElementById('secondnumber').value);
+        let sum = fnumber+snumber;
+        document.getElementById('total').innerHTML=`your total is ${sum}`;
+
+    }
+    
+    
+    </script>
+</body>
+</html>

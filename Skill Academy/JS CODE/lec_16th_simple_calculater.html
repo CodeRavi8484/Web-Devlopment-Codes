@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculater</title>
+    <style>
+        body{
+            height: 100%;
+            width: 100%;
+            /* display: flex; */
+            /* justify-content: center;
+            align-items: center; */
+        }
+        #main{
+           position: absolute;
+           top:40%;
+           left: 40%;
+           transform: translate(-50%,);
+            background-color: antiquewhite;
+            display:inline-block;
+            border: solid 2px black;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="main">
+      <div id="inputs">
+        <h1>Simple Calculater for Childrens </h1>
+        <input type="number" id="firstnumber" placeholder="Enter 1st number">
+        <input type="number" id="secondnumber" placeholder="Enter 2nd number">
+        <br><br>
+        <input type="number" id="yourans" placeholder="Enter your Answer">
+      <br><br>
+      </div>
+    
+      <div id="buttons">
+        <button id="button_no1" onclick="add()">Add</button>
+        <button id="button_no2" onclick="sub()">sub</button>
+        <button id="button_no3" onclick="mul()">mult</button>
+        <button id="button_no4" onclick="div()">division</button>
+      <div id="text"><h3 id="tag"></h3></div>
+      </div>
+    </div>
+
+      <script>
+        function add(){
+            let fnumber = parseInt(document.getElementById('firstnumber').value);
+            let snumber = parseInt(document.getElementById('secondnumber').value);
+            let yourAns = parseInt(document.getElementById('yourans').value);
+            let sum = parseInt(fnumber+snumber);
+            if(yourAns===sum){
+                document.getElementById('tag').innerHTML="Congrats your answer is correct";
+            }
+            else{
+                document.getElementById('tag').innerHTML=" Your answer is wrong please try again";
+            }
+            
+        }
+        function sub(){
+            let fnumber = parseInt(document.getElementById('firstnumber').value);
+            let snumber = parseInt(document.getElementById('secondnumber').value);
+            let yourAns = parseInt(document.getElementById('yourans').value);
+            let sub = parseInt(fnumber-snumber);
+            if(yourAns===sub){
+                document.getElementById('tag').innerHTML="Congrats your answer is correct";
+            }
+            else{
+                document.getElementById('tag').innerHTML=" Your answer is wrong please try again";
+            }
+            
+        }
+        function mul(){
+            let fnumber = parseInt(document.getElementById('firstnumber').value);
+            let snumber = parseInt(document.getElementById('secondnumber').value);
+            let yourAns = parseInt(document.getElementById('yourans').value);
+            let mul= parseInt(fnumber*snumber);
+            if(yourAns===mul){
+                document.getElementById('tag').innerHTML="Congrats your answer is correct";
+            }
+            else{
+                document.getElementById('tag').innerHTML=" Your answer is wrong please try again";
+            }
+            
+        }
+        function div(){
+            let fnumber = parseInt(document.getElementById('firstnumber').value);
+            let snumber = parseInt(document.getElementById('secondnumber').value);
+            let yourAns = parseInt(document.getElementById('yourans').value);
+            let div = parseInt(fnumber/snumber);
+            if(yourAns===div){
+                document.getElementById('tag').innerHTML="Congrats your answer is correct";
+            }
+            else{
+                document.getElementById('tag').innerHTML=" Your answer is wrong please try again";
+            }
+            
+        }
+      </script>
+
+      <br>
+      <br><br>
+      <!-- <h3>Give some css to it </h3> -->
+    
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Temperatur Converter</title>
+    <style>
+        *{
+            margin: 0;
+            padding: o;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        #main{
+            border: solid black 3px;
+            width: 400px;
+            height: 200px;
+           
+            
+        }
+        #body{
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        h2{
+            padding-top: 16%;
+            display: flex;
+            justify-content: center;
+        
+        }
+        #celces{
+            padding-top: 1%;
+            padding-right: 1%;
+        }
+        #feranite{
+            padding-top: 1%;
+            padding-left: 1%;
+        
+        }
+        </style>
+</head>
+<body>
+    <div id="main">
+    <h2>Temperature Converter</h2>
+    <div id="body">
+     
+     <div id="celces">
+        <input type="number" placeholder="CElceus" id="input1" onkeyup="CtoF()">
+     </div>
+     <div id="feranite">
+        <input type="number" placeholder="feranite" id="input2" onkeyup="FtoC()">
+     </div>
+     </div>
+     <div id="ans"></div>
+   
+
+   </div>
+
+   <script>
+    function CtoF(){
+        let celcies = parseInt(document.getElementById('input1').value);
+        var convertedfernite=((celcies*1.8)+32);
+        console.log(convertedfernite);
+        document.getElementById('input2').value = convertedfernite;
+    }
+    function FtoC(){
+        let ferinite=parseInt(document.getElementById('input2').value);
+        var convertedcelcius=((ferinite-32)*0.5555);
+        document.getElementById('input1').value = convertedcelcius;
+    }
+    
+
+   </script>
+     
+</body>
+</html>

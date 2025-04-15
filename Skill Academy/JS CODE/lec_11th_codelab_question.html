@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funcions questions</title>
+</head>
+<body>
+
+    <!-- question 01-- create a function that takes number as input and return thr number of digits in that number -->
+     <h3>enter your number:</h3>
+     <input id="number2"  type="number" placeholder="enter number">
+     <button onclick="numberdigit()">Submit</button>
+     <div id="demo"></div>
+
+    
+    <script>
+        function numberdigit(){
+            let number1=document.getElementById('number2').value;
+            let length1=number1.length;
+            document.write(' total digits are : '+length1);
+
+        }
+
+        // answer number 2 of same question ==
+
+        function countDigits(number) {
+        // Convert the number to a string and check its length
+         let numString = number.toString();
+  
+        // If the number is negative, subtract 1 from the length to ignore the negative sign
+        if (number < 0) {
+        return numString.length - 1;
+        } else {
+        return numString.length;
+            }
+        }
+
+        // Examples of using the function
+        console.log(countDigits(12345)); // Output: 5
+        console.log(countDigits(-12345)); // Output: 5
+        console.log(countDigits(0)); // Output: 1
+        console.log(countDigits(100));
+
+
+        // qustion 2-- write a funcation that take a number as input and return reverse of number.
+        document.write('<br>')
+
+        function reversenumber(number3){
+            let newstring =number3.toString();
+            let array=newstring.split('');
+            let reversearray= array.reverse();
+            let reversedstring=reversearray.join('');
+            let reversednumber=parseInt(reversedstring);
+            document.write(reversednumber);
+
+        }
+        reversenumber(12345);
+
+
+
+        // question 3 -- function that takes the number as input and checks if prime or not if prime return true else false
+
+        function primenumber(num){
+
+            if(num<2)
+                return 'false = not prime';
+            
+            for(let i=2;i<num;i++){
+                if(num%i===0){
+                    return ' false =notprime';
+                }
+            }
+            return 'true = prime';
+            
+            
+        }
+        document.write(primenumber(7));
+
+        //question 4 in school grades given according to marks write program to calculatr grades AS-90-100=A ;80-90=B ; 70-80=C ; 60-70=D ;etc
+        function grades(marks){
+            if(marks>=90 && marks<=100){
+                return 'A'
+            }
+            else if(marks>=80 && marks<=89){
+                 return 'B'
+            }
+            else if(marks>=70 && marks<=79){
+                return 'C'
+            }
+            else if(marks>=60 && marks<=69){
+                return 'D'
+            }
+            else if(marks<1 || marks>100){
+                return 'error'
+            }
+            else{
+                return 'E'
+            }
+        }
+        document.write(grades(79));
+
+        
+ 
+        document.write('<br>')
+
+        // question 5 == library wants to manage overdue book fines.fine is calculated based on number of days. 0.5 for first 7 days. 1 for next 
+        // 7 days and 2 for after all days.
+        var days =prompt('enter number of days you took the book');
+        function fine(){
+            if(days<=0){
+                document.write(' negative value has no charges');
+            }
+
+
+
+            else if(days>0 && days<=7){
+                let charge=0.5;
+                let dayss = days  * charge ;
+                document.getElementById('demo').innerHTML=('you total charges is : '+ dayss);
+
+            }
+            else if(days>7 && days<=14)
+            {
+                let charge  = 1;
+                let dayss2 =  ((days-7) * charge) + (7*0.5) ;
+                document.getElementById('demo').innerHTML=('you total charges is : '+ dayss2);
+            }
+            else{
+                let charge  = 2;
+                let dayss3 = ((days-14)  * charge)+(7*0.5)+(7*1) ;
+                document.getElementById('demo').innerHTML=('you total charges is : '+ dayss3);
+            }
+        }
+        fine();
+        
+        
+        
+    </script>
+    
+</body>
+</html>

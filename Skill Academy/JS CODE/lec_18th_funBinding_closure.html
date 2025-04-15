@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Binding and Clousers </title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="demo2"></div>
+    <div id="demo3"></div>
+    <div id="demo4"></div>
+    <script>
+        //001 == With the bind()method, create two objects and make an object borrow a method from another object.
+
+        var Person={        // object created 
+             fname:"Ravi",
+             lname:"Nangare",
+             fun:function(){     //fun function created 
+                return (`My full name is ${this.fname} ${this.lname}`);
+             }
+        }
+        
+        var member={         //another object created 
+           fname:'Somnath Sanjay',
+           lname:"Nangare"
+        }
+        let namee=Person.fun.bind(member);    //the fun function is binded into member from person and stored in namee.
+        document.getElementById('demo').innerHTML=namee();   //namee is called .
+
+
+        // 002 == When used in an object method,this refers to the object. Create an object, where you have multiple properties and values, and define a function as one value. With help of this keyword access the values of properties in that function. Invoke the function to display the data from theobject.
+
+
+        var multiple={
+            fname:"Datta",
+            lname:"Tapara",
+            funn:function(){
+                return(`Name is: ${this.fname} ${this.lname}`);
+            }
+        }
+        
+        document.getElementById("demo2").innerHTML=multiple.funn();
+
+
+        // 003 == When used alone,this refers to the global object.In a browser window the global object is [object Window] , Display the global object in a browser window by assigning this as a value of a variable and print the variable.
+        let x=this;      //this refers to the whole window and stored in x variable.
+        document.getElementById("demo3").innerHTML=x;  
+        console.log(x);    //x is called ans placed in demo3 id.
+
+
+
+        // 004  == In a function, the global object is the default binding for this. Create a function that returns this.And invoke the function to see what gets printed in the output window.
+
+        function invokethis(){
+            return this;
+
+        }
+        document.getElementById("demo4").innerHTML=invokethis();
+       
+
+    </script>
+</body>
+</html>

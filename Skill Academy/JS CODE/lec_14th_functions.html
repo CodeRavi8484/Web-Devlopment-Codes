@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h1>function practice</h1>
+    <script>
+        // question 01 = Display a text in the console window using JavaScript Functions
+        function hello(){
+            console.log("hello there");
+        }
+        hello();
+
+
+    //question 02 = Print the username in the console window, using function parameters. Get the user name usingthe prompt window
+    var name=prompt("enter your name");
+    function greet(){
+        console.log("hello "+ name);
+    }
+    greet();
+
+    //question 03 = Add two numbers and display the sum in the console window by passing the numbers as arguments of the function
+    function add(a,b){
+        let c=a+b;
+        console.log("addition is "+ c);
+
+    }
+    add(10,20);
+
+    // //question 04 = Display the sum of two numbers in the console window by using a function with parameter,function return, 
+    // //and prompt for getting user input.
+    let f = parseFloat(prompt("enter first no."));
+    let g = parseFloat(prompt("enter second no."));
+
+    function sum( d,e){
+      let result=d+e;
+      return result;
+    }
+    console.log(sum(f,g));
+   
+   
+   </script>
+    
+</body>
+</html>

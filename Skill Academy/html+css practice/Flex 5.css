@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    
+
+}
+html,body{
+    
+    
+    border: solid 2px black;
+    height: 100%;
+    width: 100%;
+    
+    
+   
+}
+
+.main1{
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+   
+    
+
+    
+
+  
+    
+    
+    
+   
+    
+
+}
+.red{
+    
+    background-color: red;
+    
+    height: 100px;
+    width: 200px;
+    
+    
+
+}
+.pink{
+    background-color: pink;
+    width: 200px;
+    height: 100px;
+    
+}
+.green{
+    background-color: green;
+    width: 200px;
+    height: 100px;
+}
+    
+.yellow{
+    background-color: yellow;
+    width: 200px;
+    height: 100px;
+}
+.problem2{
+    border: solid 2px;
+    background-color: rgb(155, 154, 151);
+width: 50%;
+margin: 100px 0px;
+
+
+
+}
+.w{
+    padding-bottom: 20px;
+}
+.P{
+    padding-bottom: 20px;
+}
+.r{
+    padding-bottom: 20px;
+}
+
+.x{
+    background-color: rgb(247, 228, 203);
+display: flex;
+justify-content: center;
+}
+.y{
+    background-color: rgb(240, 139, 6);
+    display: flex;
+justify-content: center;
+}
+
+
+#myDIV {
+    height:300px;background-color:#FFFFFF;
+    background-color: antiquewhite;
+    height: 200px;
+}
+#mymain {
+    height: 100px;
+    display: flex;
+    flex-flow: column-reverse wrap-reverse;
+}
+#mymain div {
+    width:60px;
+    height:60px;
+    padding:5px;
+}
+
+#flex{
+    height: 300px;
+    width: 300px;
+    background-color: aqua;
+    display: flex;
+    justify-content:space-evenly;  /*for width wise */
+
+    align-items: center; /*for height wise */
+}
+#box1{
+    height: 70px;
+    width: 70px;
+    background-color: black;
+}
+#box2{
+    height: 70px;
+    width: 70px;
+    background-color: rgb(224, 121, 83);
+}
+#box3{
+    height: 70px;
+    width: 70px;
+    background-color: rgb(47, 186, 22);
+}
+    

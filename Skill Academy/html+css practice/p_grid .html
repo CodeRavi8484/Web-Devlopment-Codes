@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid </title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+           
+            height: 100%;
+            width: 100%;
+            
+        }
+        #main{
+            height: 100%;
+            width: 100%;
+            background-color: yellow;
+            display: grid;  
+            /* Step 01 = at initial state it will automaticaly divide screen into number of divs used in main. */
+
+            grid-template-columns: 20% 20% 20% 20% 20%; /* step 02 =using these we divided the divs */
+            grid-template-rows: 20% 20% 20% 20% 20%;
+            /* now as weincrease the number of divs it will automaticall gets adjusted in screen just like an exel sheet */
+
+            /* step 4 = Centering the divs */
+            align-items: center;    /*it will center on y axis */
+            justify-items: center;   /*it will center on x axis */
+
+
+            /* Step 05 = Justify and align content used */
+            justify-content: center;
+            align-content: center;
+
+
+
+
+        }
+        .div1{
+            height: 50px;   /* step 03 = here we can give septrate sizing to divs also */
+            width: 50px;
+
+
+            background-color: rgb(231, 24, 24);
+            border: 2px solid black;
+        }
+        
+        
+    </style>
+</head>
+<body>
+<div id="main">
+    <div class="div1"></div>
+    <div class="div1"></div>
+    <div class="div1"></div>
+    <div class="div1"></div>
+    <div class="div1"></div>
+    <div class="div1"></div>
+    <div class="div1"></div>
+    <div class="div1"></div>
+    <div class="div1"></div>
+    <div class="div1"></div>
+</div>
+    
+</body>
+</html>

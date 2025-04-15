@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Questions Solving</title>
+</head>
+<body>
+    <h2>This are the questions of Events </h2>
+    <br><br>
+    <!-- question no. 01 -->
+    <button id="button" onclick="onclickevent()">Button</button>
+    <div id="demo"></div>
+
+    <br><br>
+    
+     <!-- question no. 02 -->
+    <h3 onmouseover="onmouseoverevent()">Keep the cursor over me.</h3>
+    <br><br>
+
+     <!-- question no. 03 -->
+    <input type="text" placeholder="Enter input" id="input" onfocus="focusevent()">
+    <br><br>
+
+     <!-- question no. 04 -->
+      <input type="text" id="input2" onkeydown="keydownevent()">
+
+
+    <script>
+        // 001 == Create a function that displays something and invoke the function on the click event of the button.
+        function onclickevent(){
+            document.getElementById("demo").innerHTML="This line is in an function and function is invoked on the clicking of the button using onclick method.";
+        
+            document.body.style.color="red";
+            alert("This is onclick method");
+        }
+
+
+    // 002 == Create a function that throws an alert, and invoke the function on the mouseover event of the aragraph.
+
+    function onmouseoverevent(){
+        alert("This is alert of mouseover.")
+       document.body.style.color="Green";
+
+    }
+
+
+    // 003 === Apply styles to the input text box element on the focus event with help of a function.
+    function focusevent(){
+        document.getElementById("input").style.backgroundColor="lightblue";
+    }
+
+
+    // 04 == On the keydown event of an input text box display an alert window with help of function.
+
+    function keydownevent(){
+        document.getElementById("input2").innerHTML=alert("The keydown event is occured");
+    }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html> 

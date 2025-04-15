@@ -1,0 +1,390 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+    color:white;
+    text-decoration: none;
+    
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* page 1 start */
+#nav1{
+    
+    height: 20px;
+    padding-top: 15px;
+    background-color:#333333;
+    padding-bottom: 4px;
+}
+#nav1 a {
+    position: relative; /* Needed for the pseudo-element */
+    transition: color 0.3s ease;
+}
+
+#nav1 a:hover {
+    color: #cc741b; /* Change text color on hover */
+}
+
+/* Add underline effect */
+#nav1 a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #e55f21; /* Underline color */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}
+
+#nav1 a:hover::after {
+    transform: scalex(1);
+    transform-origin: left;
+}
+
+#main{
+    background-image: url('https://jolly-kalam-23776e.netlify.app/mytunes/img/showcase.jpeg') ;
+    height:95%;
+     background-size: cover;
+    font-size: large;
+}
+#main h1{
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
+    font-size:65px;
+}
+#main h2{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    font-size:xx-large;
+}
+#main p#xx{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    font-size:larger;
+}
+#main p#yy{
+    display: flex;
+    justify-content: center;
+    padding-top:10px; 
+    font-size:large;
+}
+
+
+
+/* page 2 start */
+#music{
+    height: 1200px;
+    width: 100%;
+    background-color: #252529;
+    
+}
+#music h1#first{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    font-size: 35px;
+    font-weight: 600;
+}
+h1 i{
+    padding-right: 5px;
+    font-size: 50px;
+    font-weight: 500;
+}
+h1 p{
+    padding-top: 6px;
+}
+#second{
+    padding-top:50px;
+    display: flex;
+    justify-content: center;
+    font-weight: 550;
+}
+#line1{
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    font-weight: 300;
+    word-spacing: 3px;
+    word-spacing: 4px;
+}
+#line2{
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    font-weight: 300;
+    word-spacing: 3px;
+    word-spacing: 4px;
+    padding-top: 10px;
+}
+#line3{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    font-weight: 300;
+    word-spacing: 3px;
+    word-spacing: 4px;
+}
+#button{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    height:55px;
+    width: 100%;
+   
+    
+}
+#button1{
+    width: 170px;
+    background-color:#D3071B;
+    font-size: 15px;
+    font-weight: 500;
+    
+}
+#button1:hover{
+    background-color:rgb(186, 241, 103);
+    color: black;
+    font-weight: 700;
+    font-size:large;
+
+}
+#small{
+    display: flex;
+    justify-content: center;
+    padding-top:30px;
+}
+#music img{
+    padding-top: 25px;
+    height: 60%;
+    width: 80%;
+    padding-left: 150px;
+}
+
+
+
+/* page 3 start */
+#page3{
+    height: 1200px;
+    width: 100%;
+    
+}
+#head h1{
+    font-size: 30px;
+    color:#333333;
+    font-weight:550;
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+
+}
+#content p{
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    word-spacing: 1px;
+    font-size: 20px;
+    padding-top: 9px;
+}
+#readbutton {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+   
+
+
+} 
+#readbutton button{
+    color: white;
+    height: 50px;
+    width: 120px;
+    background-color: #153567;
+    font-size: 15px;
+}
+#readbutton button:hover{
+    background-color:  #143F85;
+}
+#image{
+    display: flex;
+    justify-content: center;
+}
+#image img{
+    padding-top: 20px;
+   width: 60%;
+}
+
+
+
+#page4{
+    height: 1350px;
+    width: 100%;
+    /* background-color: #cc741b; */
+}
+#part1{
+    height: 570px;
+    
+    width: 100%;
+    background-image: url(https://jolly-kalam-23776e.netlify.app/mytunes/img/section-bg.jpeg);
+    
+    background-size: cover;
+    background-position:bottom;
+    
+}
+#part1 h1{
+    padding-top: 230px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+#part1 p{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+.l1{
+    padding-top: 8px;
+}
+#part2{
+    height: 450px;
+    width: 100%;
+    background-color: #fcfcfe;
+    display: flex;
+    
+}
+#part2 img{
+    height: 400px;
+    width: 550px;
+    padding-left: 230px ;
+    padding-right: 10px;
+}
+#part2content h3{
+    color: black;
+    padding-top: 50px;
+    font-size: 25px;
+
+}
+#p1{
+    width: 75%;
+    color: black;
+    display: flex;
+    justify-content: center;
+    word-spacing: 3px;
+    margin-right:30px;
+    padding-top: 15px;
+    line-height: 25px;
+}
+#p2{
+    color: black;
+    padding-top: 15px;
+    padding-bottom: 13px;
+
+}
+#part2content hr{
+    width: 75%;
+   
+    
+}
+#part2content a{
+    
+    color: black;
+    text-decoration: none;
+    padding-top: 10px;
+    
+                                                                                                                                                                                                    
+}
+#part2content i{
+    color: black;
+    
+    font-weight: 600;
+}
+
+#part3{
+    height: 330px;
+}
+#header{
+    height: 82%;
+    background-color: #252529;
+    display: flex;
+    justify-content:space-around;
+    padding-top: 70px;
+}
+#header a{
+    line-height: 25px;
+    color: #CCCCCC;
+    font-size:small;
+}
+#a{
+    padding-top: 15px;
+}
+#b{
+  padding-top: 15px;
+}
+#c{
+    padding-top: 15px;
+}
+#d{
+    padding-top: 15px;
+}
+#headerp1{
+    margin-left:  140px;
+}
+#headerp4{
+    margin-right:  140px;
+}
+
+#shop{
+    padding-bottom: 10px;
+    font-size: large;
+    font-weight: 500;
+}
+#orangestore{
+    padding-bottom: 10px;
+    font-size: large;
+    font-weight: 500;
+
+}
+#Education{
+    padding-bottom: 10px;
+    font-size: large;
+    font-weight: 500;
+}
+#AboutOrange{
+    padding-bottom: 10px;
+    font-size:large;
+    font-weight: 500;
+}
+#header hr {
+    border: none;           /* Remove the default border */
+    height: 2px;            /* Set the height of the line */
+    background-color: #333; /* Set the background color of the line */
+    width: 170%;             /* Set the width of the line */
+}
+#header ul{
+    list-style-type: none;
+}
+#bottom{
+    height: 18%;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+
+
+
+
+    
+
+     

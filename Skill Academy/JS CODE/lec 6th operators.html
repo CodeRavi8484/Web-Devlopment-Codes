@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operators</title>
+</head>
+<body>
+    <div id="op"></div>
+    <script>
+        //arthamatic operator
+        var a=30;
+        var b=20;
+        document.getElementById('op').innerHTML=a+b;
+        document.write("<br>");
+        document.write(a*b);
+        document.write("<br>");
+
+        document.write(a**b);
+        document.write("<br>");
+        
+        document.write(a%b);
+        document.write("<br>");
+        document.write(a/b);
+
+
+        //assignmenet opeartor
+        document.write("<br>");
+         var x=10;
+          x += 10; //add and assign 
+          document.write(x);
+          document.write("<br>");
+          x-= 10   //substract and assign 
+          document.write(x);
+          document.write("<br>");
+          x %= 2; //modulas and assign 
+          document.write(x);
+
+
+          // ternary operator
+          var t=1;
+          var v =122;
+          document.write((t<v)?"t is smaller" :"v is greater");
+          console.log(typeof(t));
+
+          //concnatation operator
+          var m="ravi";
+          var n=" nangare";
+          var k=m+n;
+          document.write(k);
+
+          var o=" how are ";
+          document.write(o+="you");
+
+          // question 1 operator assignment
+          document.write("<br>");
+          var h=10;
+          var l=77;
+          var m=h+l;
+          document.write(m);
+          document.write("<br>");
+          // question 2 operator assignment add and equal to operator
+          document.write("before increment " +m);
+          document.write("<br>");
+          m += 3;
+          document.write("after increment " +m) ;
+          
+
+          document.write("<br>");
+
+          // question 3  =Using JavaScript operators calculate the number of weeks and remaining days in a year.
+          var days = 365;
+          var week =7;
+          var weeks  =days/week;
+          let kk=Math.floor(weeks);// The Math.floor() function returns the largest integer less than or equal to a given number.
+          document.write("no. of weeks are "+kk);
+        
+
+          var weeks  =days%week;
+          document.write(" and number of days remainning are"+weeks);
+
+          // question 4 =Using the “+” operator concat two strings and print them
+          let q="Ravi";
+          let w="Nangare";
+          let c=q+" "+w;
+          document.write("<br>");
+          document.write(c);
+
+
+
+          
+
+
+
+
+        
+
+
+    </script>
+    
+</body>
+</html>

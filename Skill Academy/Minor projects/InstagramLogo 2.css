@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+    
+}
+body{
+    margin-left: 40%;
+}
+.insta{
+    
+    width: 150px;
+    height: 150px;
+    background: radial-gradient( circle at 30% 107%, #fdf497 0%, #fdf497 5%,#fd5949 45%, #ac2782 60%, #285aeb 90%);
+    border-radius: 35px;
+    display: grid;
+    place-items: center;
+    
+}
+.innerbox{
+    width: 120px;
+    height: 120px;
+    border: 10px solid #fff;
+    border-radius: 32px; 
+    display: grid;place-items: center;position: relative;
+    
+
+   
+
+}
+.innercircle{
+    width:40px ;
+    height: 40px;
+    border: 10px solid white;
+    border-radius: 30px;
+    margin-bottom: 25px;
+}
+.smallcircle{
+   
+    margin-left: 85px;
+    margin-top: 5px;
+    width: 10px;
+    height: 10px;
+    border: 5px solid white;
+    border-radius:10px;
+}
+
+

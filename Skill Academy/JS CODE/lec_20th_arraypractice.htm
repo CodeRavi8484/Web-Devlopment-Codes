@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Practice</title>
+</head>
+<body>
+    <!-- question 001 -->
+    <h3>Array Practice Questions</h3>
+    <div id="demo1"></div>
+    <div id="demo2"></div>
+    <div id="demo3"></div>
+    <br><br>
+
+    <div id="demo4"></div>
+    <div id="demo5"></div>
+    <div id="demo6"></div>
+    <br><br>
+    
+
+    
+    <script>
+        
+        //Question no 001 ==>
+        //Write a javascript file to store addresses of the places in an array and display it on using alert command, also make use of 2d array and store 3 people names, age, addresses and then display any of the following as an output! 
+        const cities=["london","Michigaon","Delhi","Mumbai"];
+        for(let i=0;i<cities.length;i++){
+        alert(cities[i]);
+        }
+
+        const twodarray=[             //here an 2d array is created and 
+            ["ravi",22,"omerga"],     //inside that we have created 3 more array in which we have given name,age,address of same person in one array.
+            ["datta",23,"latur"],     //another person array.
+            ["prathmesh",22,"shirval"]
+        ];
+
+        
+        //here we have display the array elements on web page using getelementbyid nd literals
+        document.getElementById("demo1").innerHTML=`name : ${[twodarray[0][0]]}`;  //id = demo1
+        document.getElementById("demo2").innerHTML=`age : ${[twodarray[0][1]]}`;    //id = demo2
+        document.getElementById("demo3").innerHTML=`address : ${[twodarray[0][2]]}`;  //id = demo3
+
+
+
+        document.getElementById("demo4").innerHTML=`name : ${[twodarray[2][0]]}`;    //id = demo4
+        document.getElementById("demo5").innerHTML=`age : ${[twodarray[2][1]]}`;      //id = demo5
+        document.getElementById("demo6").innerHTML=`address : ${[twodarray[2][2]]}`;    //id = demo6
+
+        
+
+        //here we have accesed the array set no 2 in single line without using ids of divs directly used document.write.
+        document.write("Name :"+ twodarray[1][0] + " age :" + twodarray[1][1] + " address :" + twodarray[1][2]  );
+
+
+    
+
+       //Question NO 002 ==>
+       // Write a javascript file to store addresses of the people in an array and using filter function print only those addresses that have their length greater than 5, pop an address and then find if pune and delhi exist in the array or not?
+       document.write("<br>");
+       document.write("<br>");
+        // Array of addresses
+        const addresses = ["London", "Michigan", "Delhi", "Mumbai"];
+
+        // Function to check if an address length is greater than 5
+        function isLong(addr) {
+            return addr.length > 5;
+        }
+
+        // Filter addresses to get only those with length greater than 5
+        const longer = addresses.filter(isLong);
+        
+        // Display filtered addresses
+        document.write("Addresses with length greater than 5: " + longer.join(", ") + "<br>");
+       
+        alert(addresses.length); 
+        addresses.pop();
+        alert(addresses.indexOf('Delhi'));
+        alert(addresses.indexOf('Pune'));
+
+      
+
+       
+        
+    </script>
+    
+</body>
+</html>

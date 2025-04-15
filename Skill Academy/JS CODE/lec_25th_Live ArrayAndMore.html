@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and more </title>
+</head>
+<body>
+    <h2>Array and its many methods and properties.</h2>
+
+    <script>
+       let fruits=["Apple","orannge","pinapple","banana"];
+       
+       //01 .length method
+       console.log(fruits);
+       console.log(fruits.length); //.length method is used
+
+       //02  typeof() method used
+       console.log(typeof(fruits));
+
+       //03  push() and pop() operations
+       console.log(fruits.push("kivi")); //push will add element at end of array and return complet array
+       console.log(fruits);
+     
+       console.log(fruits.pop());     //pop will remove element from end of array and return only removed element.
+       console.log(fruits);
+
+       //04 = unshift() and shit().
+       console.log(fruits.unshift("1st element"));   //it will add 1 0r more wlwmwnt  at first of an array and new length of array will be return .
+       console.log(fruits); 
+
+       console.log(fruits.shift());   //it will delete first element from array and return deleted element
+       console.log(fruits); 
+
+       //05 = .Splice method on array
+       fruits.splice(2,0,'kiwi');      //it is used to add,remove,or replace elements in array
+       console.log(fruits);            //Syntex => arrayname.spliace(startindexvalue,todeletcount,item1,item2,item_N);
+
+       fruits.splice(2,1);         //it will remove 1 element at index 2.
+       console.log(fruits);       
+
+       //minus indexing then
+       fruits.splice(-1);      //it will start traversing from back side and remove 1st element.
+       console.log(fruits);  
+
+       fruits.splice(-2,1);      //it will start traversing from back side and delet 1 element at index -2.
+       console.log(fruits); 
+       
+       fruits.splice(-1,0,'banana');      //it will start traversing from back side and add banana element there.
+       console.log(fruits); 
+
+       fruits.splice(-2,0,'kiwi');      //it will start traversing from back side and add kiwi element at -2 index there.
+       console.log(fruits); 
+
+       fruits.splice(-2);      //it will start traversing from back side and remove all element from -2 to next all.
+       console.log(fruits); 
+
+
+       // 006 = .slice()    it extracts an portion of array without modifying original array .
+       //syntex   arrayname.slice(start,end)          //it will not include thr end in new array
+
+       const cities=['pune','mumbai','channi','bangluru','haydrabad'];
+       const newarray=cities.slice(1,4);
+
+       console.log(newarray);
+       console.log(cities);
+
+       // 007 insexof() ==> To find indexof an element with ther name.
+
+       console.log(cities.indexOf('channi')); //op=2
+
+       // 008 we can use splice and indexof both together to add remove element with specifying the variable name at with we store the index of any element.
+
+       let indexvalue=cities.indexOf('bangluru');
+       console.log(`index of bangluru is ${indexvalue}`);
+
+       cities.splice(indexvalue,0,'delhi','goa','mumbai');
+       console.log(cities);
+
+       //008 lastindexof()     //it will give lastindex of same element present in array //here we have mumbai duble in array
+       console.log(cities.lastIndexOf('mumbai'));
+
+       //009 at() == it will show what value is at that index
+
+       console.log(cities.at(5));
+       
+
+
+
+       
+
+
+
+
+
+
+       
+
+
+    </script>
+    
+</body>
+</html>

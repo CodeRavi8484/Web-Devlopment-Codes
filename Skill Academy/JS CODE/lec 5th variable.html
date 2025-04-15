@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    
+    <h1>Hello </h1>
+    <div id="demo"></div>
+    <div id="pro"></div>
+    <div id="literals"></div>
+    
+    <script>
+        
+    
+        //if else for pop up box
+        if(confirm("do you want to continue")){
+            document.getElementById('demo').innerHTML='you can continue';
+        }
+        else{
+            document.getElementById('demo').innerHTML='you can not continue';
+
+        }
+
+        // if(confirm("do you want to continue")){
+        //     document.write('continue');
+        // }
+        // else{
+        //     document.write('not continue');
+        // }
+        
+
+        // using prompt
+        let name=prompt('what is your name');
+        document.getElementById('pro').innerHTML=('your name is '+ name);
+        
+
+        // literals use to merge string using` $`
+        let namee='ravi';
+        let marks='99';
+        let rollno='19';
+        let coursename = 'cs';
+
+        document.getElementById('literals').innerHTML =`student whose name is ${namee} whose rollno is ${rollno} has scored ${marks} marks in course ${coursename}.`;
+
+        // typeof operartor
+        let a='ravi';
+        console.log(typeof(a));
+
+
+
+    </script>
+</body>
+</html>

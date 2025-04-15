@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question in Live Lecture</title>
+</head>
+<body>
+    <h2>Live lecture And solving many questions</h2>
+    <script>
+    //Question 001 ==
+    class rectangle{
+        constructor(width,height){
+            this.width=width;
+            this.height=height;
+        }
+        area(){
+            return this.width * this.height;
+    
+        }
+    }
+    let obj=new rectangle(10,11);
+    console.log(obj.area());
+    
+     //Question 002 ==
+     function outer(){             // 1st clouserfun is called then it will call outer() then the outer fun has x=10 
+        var x=10;                  //then it will not go in inside fun inner()
+        function inner(){          //then we have return inner then it will go inside but the value of x is x=102
+            console.log(x);         // and thats why output is 102.
+
+        }
+        x =102;
+        return inner();
+     }
+     var clouserfun=outer();
+     //output will be 102.
+    
+     
+     // Question no 3
+     function generatefun(){
+        var count=0;
+        return function(){
+            //return count++;
+            return ++count;
+        }
+     }
+     var counter=generatefun();
+     console.log(counter());
+     console.log(counter());
+     
+
+    </script>
+
+    
+</body>
+</html>
